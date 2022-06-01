@@ -11,7 +11,7 @@ function Navbar() {
   }
   return (
     <div className='nav-wrapper'>
-      <NavLink style={({isActive}) => ({backgroundColor: isActive ? '' : ''})} to={'/todo'}>ToDo</NavLink>
+      <NavLink style={({isActive}) => ({backgroundColor: isActive ? '' : ''})} to={'/todo'} defaultChecked>ToDo</NavLink>
       <NavLink style={({isActive}) => ({backgroundColor: isActive ? '' : ''})} to={'/'} onClick={handleLogout}>Logout</NavLink>
     </div>
   )
