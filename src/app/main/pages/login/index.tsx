@@ -31,7 +31,7 @@ const Login = () => {
         }
     }
     return(
-        <div>
+        <div className='login-wrapper'>
             <div>
                 <form>
                     <h2>SignIn</h2>
@@ -44,13 +44,13 @@ const Login = () => {
                             <label htmlFor="">Password</label>
                             <input id='password' type="password" onChange={handleChange} required/>
                         </div>
-                        <div>
-                            <button onClick={onSubmit}>Login</button>
-                        </div>
-                        <div>
+                        <div id='error'>
                             {
                                 !isValidData && <span>Invalid Username or Password</span>
                             }
+                        </div>
+                        <div id='button'>
+                            <button onClick={onSubmit}>Login</button>
                         </div>
                     </div>
                 </form>
