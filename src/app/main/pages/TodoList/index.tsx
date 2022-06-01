@@ -16,6 +16,7 @@ const TablePage: React.FunctionComponent<tableProps> = () => {
   
   const handlePagenation = (side: string) => {
     if(side === 'next'){
+      
       dispatch(nextPage());
     }
     else if(side === 'previous'){
@@ -26,6 +27,10 @@ const TablePage: React.FunctionComponent<tableProps> = () => {
   useEffect(() => {
     dispatch(fetchTodosAsync());
   }, []);
+
+  useEffect(() => {
+    dispatch(setTotalItems(todos.length));
+  }, [todos]);
 
   const indexOfLastPost = current * pageSize;
   const indexOfFirstPost = indexOfLastPost - pageSize;

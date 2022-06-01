@@ -8,7 +8,7 @@ type PaginationStoreStateType = {
 }
 const initialState: PaginationStoreStateType = {
     current: 1,
-    total: 1,
+    total: 0,
     numOfPage: 1,
     pageSize: 10
 }

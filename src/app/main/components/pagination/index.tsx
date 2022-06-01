@@ -17,6 +17,7 @@ const Pagination: React.FunctionComponent<postProps> = ({
 }) => {
     
   const handlePreviousPage = () => {
+    
     paginate('previous');
   };
 
